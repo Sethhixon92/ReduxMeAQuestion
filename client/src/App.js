@@ -16,6 +16,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from "./utils/GlobalState";
 import OrderHistory from './pages/OrderHistory';
+import filterStore from './store/reducers';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -50,6 +51,7 @@ function App() {
             <Route exact path="/orderHistory" component={OrderHistory} />
             <Route exact path="/products/:id" component={Detail} />
             <Route exact path="/success" component={Success} />
+            <Route exact path="/filter" component={filterStore} />
             <Route component={NoMatch} />
           </Switch>
           </StoreProvider>

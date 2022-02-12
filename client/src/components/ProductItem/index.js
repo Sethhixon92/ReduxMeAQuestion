@@ -12,6 +12,7 @@ function ProductItem(item) {
     _id,
     price,
     quantity,
+    sort,
   } = item;
 
   const [state, dispatch] = useStoreContext();
